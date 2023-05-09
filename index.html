@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <form>
+    <h1>ACME Car Rental</h1>
+  
+    <p> Pick Up Date: <input type="date" id="pickUpDate"/> </p>
+         
+    <p>Number Of Days:<input type="number" id="numOfDays"/> </p>
+    <h2>Options:</h2>
+      <div id="optionsdiv">
+       <input type="checkbox" id="tollTag" name="tollTag" value="totalTag">
+       <lable for="tollTag">Electronic Toll Tag($3.95/day)</lable>
+             <br><br>
+        <input type="checkbox" id="gps" name="gps" value="gps">
+        <lable for="gps">GPS($2.95/day)</lable>
+            <br><br>
+            <input type="checkbox" id="roadsideAssistance" name="roadsideAssisitance" value="roadsideAssisitance">
+            <lable for="roadSideAssisitance">Roadside Assistance($2.95/day)</lable>
+            <br><br>
+        </div>
+        <div>
+        <h2>Under 25</h2>
+        <input type="radio" name="rad" id="radBtn1" value="radBtn1">
+        <lable for="radBtn1">Yes</lable>
+        <input type="radio" name="rad" id="radBtn2" value="radBtn2">
+        <lable for="radBtn2">No</lable>
+        </div>
+        <br><br>
+        <div id="EstimateBtn">
+        <button>Estimate Total Cost</button>
+        </div>
+        <br><br>
+        <div class="output">
+            <table>
+                <tr>
+                    <td>Car rental:</td>
+                    <td>$<span id="baseCost">0:00</span></td>
+                </tr>
+                <tr>
+                    <td>Options:</td>
+                    <td>$<span id="optionsCost">0:00</span></td>
+                </tr>
+                <tr id="under25SurchargeRow">
+                    <td>Under 25 surcharge:</td>
+                    <td>$<span id="under25Surcharge"> 0:00</span></td>
+                </tr>
+                <tr>
+                    <td>Total Due:</td>
+                    <td>$<span id="totalDue">0:00</span></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
